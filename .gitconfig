@@ -1,0 +1,89 @@
+[alias]
+    a = add
+    # patch interactive
+    ap = add -p 
+    # update all tracked files without adding new files, see: cam	
+    au = add -u 
+    aa = add -a
+    
+    b = branch
+    br = branch -r
+
+#    b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+    co = checkout
+    # check out new branch
+    cob = checkout -b
+    
+    c = commit --verbose
+    # -a commit all
+    ca = commit -a --verbose
+    cm = commit -m
+    # -m with commit message
+    cam = commit -a -m
+
+    d = diff
+    ds = diff --stat
+    dc = diff --cached
+    # last commit
+    dlc = diff --cached HEAD^ 
+    dp = diff --no-pager
+
+    f = fetch
+    fa = fetch --all
+
+    h = help
+
+    # one-line log
+    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    # with relative dates: git ld -10
+    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    # list changed files
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    # list branches sorted by last modified
+    lo = log
+    # log with branch/tag annotation
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    # list aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+
+    m = merge
+    mm = merge -m
+    mnc = merge --no-commit
+    mv = mv
+
+    ph = push
+    pt = push --tags
+    pl = pull
+
+    # "undo" lose history, only on private branches
+    r = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    rh = reset --hard
+    rh1 = reset HEAD^ --hard
+    rh2 = reset HEAD^^ --hard
+
+    # new commit while reverting, best on public branch
+    rv = revert
+
+    sl = stash list
+    sa = stash apply # don't drop it
+    ss = stash save
+    sdr = stash drop # drop the lastest stash
+    sp = stash pop # apply and drop stash
+    sd = stash show -p # show diffs to master
+
+    s = status -s # short
+    st = status
+
+    t = tag #list tags
+    ta = tag -a # create tag with annotation
+    td = tag -d # delete tag
+
+    tr = ls-tree --name-only -r # show all tracked files
+
+[user]
+	email = dieter@duenenhof-wilhelm.de
+[push]
+	default = simple
