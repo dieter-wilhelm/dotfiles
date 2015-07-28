@@ -1,2 +1,2 @@
 * dotfiles
-My collection of config files
+My collection of configuration files

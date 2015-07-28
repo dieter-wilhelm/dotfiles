@@ -262,7 +262,7 @@
 
 (add-to-list 'load-path "~/a-m/")
 
-;(load "default.el")
+(load "default.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; my mark paragraph, the same logic should apply to C-M-h as well and
